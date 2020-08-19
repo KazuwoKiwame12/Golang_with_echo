@@ -1,1 +1,1 @@
-web: bin/test - echo - with - db
+web: bin/test-echo-with-postgres 
