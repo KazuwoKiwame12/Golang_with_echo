@@ -261,7 +261,7 @@
 			"revisionTime": "2020-02-03T07:58:04Z"
 		},
 		{
-			"path": "github.com/labstack/echo/v4",
+			"path": "github.com/labstack/echo",
 			"revision": ""
 		},
 		{
