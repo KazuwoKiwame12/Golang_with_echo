@@ -1,0 +1,1 @@
+web: bin/test - echo - with - db
