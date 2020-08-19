@@ -1,4 +1,4 @@
-module github.com/KazuwoKiwame12/test_echo_with_db
+module github.com/KazuwoKiwame12/test-echo-with-postgres
 
 go 1.14
 
