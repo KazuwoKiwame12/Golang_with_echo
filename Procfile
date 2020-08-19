@@ -1,1 +1,1 @@
-web: bin/test-echo-with-postgres 
+web: bin/go-getting-started
