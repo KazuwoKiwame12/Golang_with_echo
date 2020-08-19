@@ -7,6 +7,12 @@ import (
 	"github.com/labstack/echo/v4"
 )
 
+type (
+	User struct {
+		NAME string `json; "name"`
+	}
+)
+
 func main() {
 
 	port := os.Getenv("PORT")
@@ -18,5 +24,13 @@ func main() {
 
 func printString(c echo.Context) error {
 	data := c.Param("string")
-	return c.String(http.StatusOK, data)
+	user := map[string]User{
+		"1": User{
+			NAME: "Hoge",
+		},
+		"2": User{
+			NAME: data,
+		},
+	}
+	return c.JSON(http.StatusOK, user)
 }
