@@ -21,3 +21,6 @@ web: bin/<project-name>
  4. herokuでアプリを作成
  5. Githubのリポジトリ連携
  6. deploy
+
+## 開発
+※exportする関数は、関数名の最初の文字を大文字にしなければならない
