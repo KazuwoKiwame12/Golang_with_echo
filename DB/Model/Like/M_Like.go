@@ -2,13 +2,12 @@ package like
 
 import db "github.com/KazuwoKiwame12/test-echo-with-postgres/DB"
 
-//User ...table: Usersのモデル
+//Like ...table: Likeのモデル
 type Like struct {
 	ID      int
 	SelfID  int
 	LoverID int
 	hasLove bool
-	Name    string
 }
 
 //Create ...Likeモデルの保存
