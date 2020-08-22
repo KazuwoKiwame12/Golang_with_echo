@@ -21,7 +21,7 @@ func main() {
 	port := os.Getenv("PORT")
 
 	e := echo.New()
-	e.PUT("/User/create", updateUser)
+	e.PUT("/User/update", updateUser)
 	e.POST("/User/create", createUser)
 	e.GET("/User/:id", getUser)
 	e.GET("/", helloWorld)
