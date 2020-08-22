@@ -10,14 +10,13 @@ type Like struct {
 	hasLove bool
 }
 
-//Create ...Likeモデルの保存
+//Create ...Likeモデルの保存 動作不良
 func Create(selfID int, loverID int, hasLove bool) *Like {
 	db := db.Connect()
 	defer db.Close()
 
 	like := Like{}
-	db.Where(Like{SelfID: selfID, LoverID: loverID, hasLove: hasLove}).FirstOrCreate(&like)
-
+	db.Where(Like{SelfID: selfID, LoverID: loverID}).Assign(Like{SelfID: selfID, LoverID: loverID, hasLove: hasLove}).FirstOrCreate(&like)
 	return &like
 }
 
