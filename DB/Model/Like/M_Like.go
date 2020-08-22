@@ -15,8 +15,9 @@ func Create(selfID int, loverID int, hasLove bool) *Like {
 	db := db.Connect()
 	defer db.Close()
 
-	like := Like{}
-	db.Where(Like{SelfID: selfID, LoverID: loverID}).Assign(Like{SelfID: selfID, LoverID: loverID, hasLove: hasLove}).FirstOrCreate(&like)
+	like := Like{SelfID: selfID, LoverID: loverID, hasLove: hasLove}
+	//like := Like{}
+	//db.Where(Like{SelfID: selfID, LoverID: loverID}).Assign(Like{SelfID: selfID, LoverID: loverID, hasLove: hasLove}).FirstOrCreate(&like)
 	return &like
 }
 
